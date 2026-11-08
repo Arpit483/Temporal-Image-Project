@@ -15,8 +15,9 @@ from framefill.io_nc import write_framefill_nc
 from framefill.engines import Interpolator
 
 interp = Interpolator()
-DOWNLOAD_DIR = Path("d:/model/storm_downloads")
-RESULTS_DIR  = Path("d:/model/results")
+ROOT_DIR     = Path(__file__).resolve().parent
+DOWNLOAD_DIR = ROOT_DIR / "storm_downloads"
+RESULTS_DIR  = ROOT_DIR / "results"
 DOWNLOAD_DIR.mkdir(exist_ok=True)
 RESULTS_DIR.mkdir(exist_ok=True)
 

@@ -1,26 +1,21 @@
-numpy
-scipy
-xarray
-h5netcdf
-h5py
-pandas
-netCDF4
-opencv-python-headless
-scikit-image
-pillow
-matplotlib
-fastapi
-uvicorn[standard]
-python-multipart
-httpx
-pytest
-# RIFE (optional, needed for the blend): install a torch build for your machine from pytorch.org
-# torch
-numpy<2
-scipy>=1.9
-pandas>=1.5
-scikit-image>=0.19
-opencv-python>=4.7
-xarray>=2023.1
-h5netcdf>=1.2
-s3fs>=2023.1
+numpy>=1.24.0
+scipy>=1.9.0
+xarray>=2023.1.0
+h5netcdf>=1.2.0
+h5py>=3.8.0
+pandas>=1.5.0
+netCDF4>=1.6.0
+opencv-python-headless>=4.7.0
+scikit-image>=0.19.0
+pillow>=9.5.0
+matplotlib>=3.7.0
+fastapi>=0.100.0
+uvicorn[standard]>=0.22.0
+python-multipart>=0.0.6
+httpx>=0.24.0
+pytest>=7.0.0
+ruff>=0.1.0
+s3fs>=2023.1.0
+# RIFE neural network (optional, needed for deep-learning blend):
+# Install torch for your hardware from https://pytorch.org, e.g.:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121

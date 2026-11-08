@@ -27,13 +27,15 @@ build/
 *.sqlite3
 
 # Large datasets, satellite imagery & evaluation results
-results/
 storm_downloads/
 milton_crops/
 data/
 *.nc
 *.npz
 *.npy
+results/*
+!results/*.csv
+!results/dayD_choice.json
 
 # Allow sample data in examples directory
 !examples/**

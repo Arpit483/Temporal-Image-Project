@@ -1,5 +1,6 @@
 """OpenRouter AI chat proxy — keeps the API key strictly server-side."""
 import os
+
 import httpx
 from fastapi import HTTPException
 
