@@ -1,0 +1,26 @@
+numpy
+scipy
+xarray
+h5netcdf
+h5py
+pandas
+netCDF4
+opencv-python-headless
+scikit-image
+pillow
+matplotlib
+fastapi
+uvicorn[standard]
+python-multipart
+httpx
+pytest
+# RIFE (optional, needed for the blend): install a torch build for your machine from pytorch.org
+# torch
+numpy<2
+scipy>=1.9
+pandas>=1.5
+scikit-image>=0.19
+opencv-python>=4.7
+xarray>=2023.1
+h5netcdf>=1.2
+s3fs>=2023.1

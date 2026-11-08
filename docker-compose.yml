@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./results:/app/results:ro
+      - ./third_party:/app/third_party:ro
+      - framefill_out:/tmp/framefill_out
+    environment:
+      - FRAMEFILL_RIFE_DIR=/app/third_party/rife_pkg
+    restart: unless-stopped
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./web/dist:/usr/share/nginx/html:ro
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  framefill_out:

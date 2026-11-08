@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Application background & surfaces */
+    --ff-bg: #0D1117;
+    --ff-workspace: #121820;
+    --ff-panel: #171E28;
+    --ff-panel-subtle: #141B24;
+    --ff-border: #283342;
+    --ff-border-subtle: #1D2632;
+
+    /* Technical text hierarchy */
+    --ff-text: #E3E9F0;
+    --ff-text-secondary: #8E9EAF;
+    --ff-text-muted: #5C6C7E;
+
+    /* Semantic scientific accents */
+    --ff-accent: #4B9CD3;
+    --ff-accent-hover: #65AFE3;
+    --ff-observed: #42B899;
+    --ff-observed-bg: rgba(66, 184, 153, 0.12);
+    --ff-synthetic: #DDA338;
+    --ff-synthetic-bg: rgba(221, 163, 56, 0.14);
+    --ff-error: #D25E45;
+    --ff-error-bg: rgba(210, 94, 69, 0.14);
+    --ff-success: #42B899;
+  }
+
+  html.light {
+    --ff-bg: #F2F5F8;
+    --ff-workspace: #FFFFFF;
+    --ff-panel: #E8EEF4;
+    --ff-panel-subtle: #EFF4F9;
+    --ff-border: #C6D1DE;
+    --ff-border-subtle: #D8E2EC;
+
+    --ff-text: #131A22;
+    --ff-text-secondary: #485564;
+    --ff-text-muted: #6E7E90;
+
+    --ff-accent: #1C6EBC;
+    --ff-accent-hover: #155B9D;
+    --ff-observed: #0C866F;
+    --ff-observed-bg: rgba(12, 134, 111, 0.12);
+    --ff-synthetic: #BE730E;
+    --ff-synthetic-bg: rgba(190, 115, 14, 0.14);
+    --ff-error: #B5361E;
+    --ff-error-bg: rgba(181, 54, 30, 0.14);
+    --ff-success: #0C866F;
+  }
+
+  html {
+    background-color: var(--ff-bg);
+    color: var(--ff-text);
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--ff-bg);
+    color: var(--ff-text);
+    min-height: 100vh;
+    font-size: 14px;
+    line-height: 1.55;
+    letter-spacing: -0.01em;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .font-mono, code, pre, kbd, .tabular-nums {
+    font-family: 'IBM Plex Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  button, input, select, textarea {
+    font-family: inherit;
+  }
+}
+
+/* Page entrance motion */
+@keyframes ff-page-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ff-page-enter {
+  animation: ff-page-in 180ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ff-page-enter {
+    animation: none;
+  }
+}
+
+/* Clean precision scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ff-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ff-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ff-text-muted);
+}

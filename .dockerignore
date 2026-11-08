@@ -1,0 +1,14 @@
+.venv
+node_modules
+web/node_modules
+.git
+__pycache__
+*.pyc
+*.nc
+!results/*.nc
+!examples/*.nc
+test-results
+milton_crops
+storm_downloads
+.pytest_cache
+.ruff_cache
