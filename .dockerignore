@@ -1,14 +1,40 @@
+# ── Python / tooling ──────────────────────────────────────────────────────────
 .venv
-node_modules
-web/node_modules
-.git
 __pycache__
 *.pyc
+.pytest_cache
+.ruff_cache
+
+# ── Node.js ───────────────────────────────────────────────────────────────────
+node_modules
+web/node_modules
+
+# ── Version control ───────────────────────────────────────────────────────────
+.git
+.github
+
+# ── Large raw satellite inputs at project root (never needed at runtime) ──────
 *.nc
 !results/*.nc
 !examples/*.nc
+
+# ── Benchmark numpy archives (~2.5 GB, not needed by the web API) ─────────────
+results/*.npz
+results/*.npy
+*.npy
+*.npz
+
+# ── Dev / intermediate artefacts ──────────────────────────────────────────────
 test-results
 milton_crops
 storm_downloads
-.pytest_cache
-.ruff_cache
+framefill_jobs.db
+
+# ── Docs & notebooks (not shipped in image) ───────────────────────────────────
+docs
+notebooks
+*.md
+!README.md
+
+# ── Secrets ───────────────────────────────────────────────────────────────────
+.env
