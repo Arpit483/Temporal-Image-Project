@@ -51,7 +51,9 @@ EXPOSE 8000
 
 ENV FRAMEFILL_RIFE_DIR=/app/third_party/rife_pkg \
     PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBYTECODE=1
+    PYTHONDONTWRITEBYTECODE=1 \
+    MPLCONFIGDIR=/tmp/matplotlib \
+    HOME=/tmp
 
 # Non-root user for security
 RUN groupadd --gid 1001 framefill && \
